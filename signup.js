@@ -13,14 +13,6 @@ const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const terms = document.getElementById("terms");
 
-onAuthStateChanged(auth, (user) => {
-
-    if (user) {
-        window.location.replace("dashboard.html");
-    }
-
-});
-
 const signupBtn = document.getElementById("signupBtn");
 
 signupForm.addEventListener("submit", async (e) => {
@@ -103,8 +95,8 @@ signupForm.addEventListener("submit", async (e) => {
         showToast("Account Created Successfully", "success");
 
         setTimeout(() => {
-            window.location.href = "login.html";
-        }, 2000);
+            window.location.href = "dashboard.html";
+        }, 1500);
 
     } catch (error) {
 
